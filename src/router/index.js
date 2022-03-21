@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
+import SignUpView from '../views/SignUpView';
+import SignInView from '../views/SignInView';
 
 Vue.use(VueRouter);
 
@@ -17,6 +19,16 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+  },
+  {
+    path: '/SignUp',
+    name: 'signUp',
+    component: SignUpView,
+  },
+  {
+    path: '/SignIn',
+    name: 'signIn',
+    component: SignInView,
   },
 ];
 
